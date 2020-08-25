@@ -1,0 +1,48 @@
+html
+    head
+        title demo pug
+        style
+            include style.css
+        script('./route.js')
+    body
+        h1 ini demo pug
+        p Contoh paragraf
+        p ini br #[br] padahal
+        a(href="http://nodejs.com") node
+        ol
+            li julia
+            li julia
+            li julia
+        ul
+            li motor
+            li mobil
+            li kereta
+        br
+        table(border="1")
+            tr
+                th kode
+                th nama product
+                th harga
+            tr
+                td 8001
+                td pencil
+                td 2000
+            tr
+                td 8001
+                td pencil
+                td 2000
+        br
+        form(action="/register", method="post")
+            div
+                label(for="nama") Nama:
+                input(type="text", name="nama", placeholder="nama-lengkap")
+            div
+                label(for="email") Email:
+                input(type="email", name="email", placeholder="nama@gmail.com")
+            div
+                label(for="gender") Jk:
+                select(name="gender")
+                    option(value="L") laki-laki
+                    option(value="P") perempuan
+            div
+                input(type="submit", value="Daftar")
