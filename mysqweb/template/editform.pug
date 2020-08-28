@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        h2 Form Edit Data
+        form(action="/edit", method="post")
+            div
+                label(for="buku_id") Kode
+            div
+                input(type="text", name="buku_id", size="10", value=book['book_id'], readonly='true')
+            div
+                label(for="buku_judul") Judul
+            div
+                input(type="text", name="buku_judul", size="30", value=book['book_judul'])
+            div
+                label(for="buku_penulis") Penulis
+            div
+                input(type="text", name="buku_penulis", size="30", value=book['book_penulis'])
+            div
+                label(for="buku_penerbit") Penerbit
+            div
+                input(type="text", name="buku_penerbit", size="30", value=book['book_penerbit'])
+            div(style='margin-top:10px')
+                input(type="submit", value="simpan")
+                input(type="button", value="batal", onclick="javascript:history.go(-1)")
+            
